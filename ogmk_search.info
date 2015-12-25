@@ -1,0 +1,11 @@
+name = Commerce Marketplace Search
+description = A module that provides search functionality for a commerce marketplace.
+core = 7.x
+package = Commerce Marketplace Features
+version = 7.x-0.1-dev
+features[features_api][] = api:2
+features[search_api_index][] = node
+features[search_api_server][] = database
+features_exclude[dependencies][entity] = entity
+features_exclude[dependencies][search_api] = search_api
+features_exclude[dependencies][search_api_db] = search_api_db

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Commerce Marketplace Search feature.
+ */
+
+include_once 'ogmk_search.features.inc';
