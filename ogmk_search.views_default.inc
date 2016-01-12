@@ -5,6 +5,16 @@
  */
 
 /**
+ * @Issue(
+ *   "Add token in better exposed filters for getting the minimum and maximum
+ *   price indexed"
+ *   type="improvement"
+ *   priority="normal"
+ *   labels="ux"
+ * )
+ */
+
+/**
  * Implements hook_views_default_views().
  */
 function ogmk_search_views_default_views() {
@@ -352,6 +362,16 @@ function ogmk_search_views_default_views() {
     t('Page'),
   );
   $export['ogmk_search_products'] = $view;
+
+  /**
+   * @Issue(
+   *   "Add token in better exposed filters for getting the minimum and maximum
+   *   price indexed per shop"
+   *   type="improvement"
+   *   priority="normal"
+   *   labels="ux"
+   * )
+   */
 
   $view = new view();
   $view->name = 'ogmk_search_shop_products';
