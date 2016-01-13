@@ -371,6 +371,13 @@ function ogmk_search_views_default_views() {
    *   priority="normal"
    *   labels="ux"
    * )
+   * @Issue(
+   *   "Display only categories and labels that are available on the currently
+   *   viewed shop in the exposed filters form"
+   *   type="improvement"
+   *   priority="low"
+   *   labels="ux"
+   * )
    */
 
   $view = new view();
