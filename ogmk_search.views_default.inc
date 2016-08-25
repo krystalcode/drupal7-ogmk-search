@@ -87,7 +87,7 @@ function ogmk_search_views_default_views() {
         ),
       ),
     ),
-    'field_category_ref' => array(
+    'ogmk_category_ref' => array(
       'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
@@ -105,7 +105,7 @@ function ogmk_search_views_default_views() {
         ),
       ),
     ),
-    'field_labels_ref' => array(
+    'ogmk_labels_ref' => array(
       'bef_format' => 'default',
       'slider_options' => array(
         'bef_slider_min' => '0',
@@ -128,7 +128,7 @@ function ogmk_search_views_default_views() {
         ),
       ),
     ),
-    'og_shop_ref' => array(
+    'ogmk_shop_ref' => array(
       'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
@@ -146,7 +146,7 @@ function ogmk_search_views_default_views() {
         ),
       ),
     ),
-    'field_products_ref_commerce_price_amount_decimal_asc' => array(
+    'ogmk_products_ref_commerce_price_amount_decimal_asc' => array(
       'bef_format' => 'bef_slider',
       'slider_options' => array(
         'bef_slider_min' => '0',
@@ -208,11 +208,11 @@ function ogmk_search_views_default_views() {
   $handler->display->display_options['sorts']['search_api_relevance']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['search_api_relevance']['expose']['label'] = 'Relevance';
   /* Sort criterion: Indexed Node: Variants » Price » Amount (decimal) (Min) */
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['id'] = 'field_products_ref_commerce_price_amount_decimal_asc';
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['table'] = 'search_api_index_node';
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['field'] = 'field_products_ref_commerce_price_amount_decimal_asc';
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['exposed'] = TRUE;
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['label'] = 'Price';
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['id'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc';
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['table'] = 'search_api_index_node';
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['field'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc';
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['label'] = 'Price';
   /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_node';
@@ -254,75 +254,75 @@ function ogmk_search_views_default_views() {
     3 => 0,
   );
   /* Filter criterion: Indexed Node: Category */
-  $handler->display->display_options['filters']['field_category_ref']['id'] = 'field_category_ref';
-  $handler->display->display_options['filters']['field_category_ref']['table'] = 'search_api_index_node';
-  $handler->display->display_options['filters']['field_category_ref']['field'] = 'field_category_ref';
-  $handler->display->display_options['filters']['field_category_ref']['value'] = array();
-  $handler->display->display_options['filters']['field_category_ref']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_category_ref']['expose']['operator_id'] = 'field_category_ref_op';
-  $handler->display->display_options['filters']['field_category_ref']['expose']['label'] = 'Category';
-  $handler->display->display_options['filters']['field_category_ref']['expose']['operator'] = 'field_category_ref_op';
-  $handler->display->display_options['filters']['field_category_ref']['expose']['identifier'] = 'category';
-  $handler->display->display_options['filters']['field_category_ref']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_category_ref']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['ogmk_category_ref']['id'] = 'ogmk_category_ref';
+  $handler->display->display_options['filters']['ogmk_category_ref']['table'] = 'search_api_index_node';
+  $handler->display->display_options['filters']['ogmk_category_ref']['field'] = 'ogmk_category_ref';
+  $handler->display->display_options['filters']['ogmk_category_ref']['value'] = array();
+  $handler->display->display_options['filters']['ogmk_category_ref']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['operator_id'] = 'ogmk_category_ref_op';
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['operator'] = 'ogmk_category_ref_op';
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['identifier'] = 'category';
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_category_ref']['expose']['reduce'] = 0;
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['reduce'] = 0;
   /* Filter criterion: Indexed Node: Labels */
-  $handler->display->display_options['filters']['field_labels_ref']['id'] = 'field_labels_ref';
-  $handler->display->display_options['filters']['field_labels_ref']['table'] = 'search_api_index_node';
-  $handler->display->display_options['filters']['field_labels_ref']['field'] = 'field_labels_ref';
-  $handler->display->display_options['filters']['field_labels_ref']['value'] = array();
-  $handler->display->display_options['filters']['field_labels_ref']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['operator_id'] = 'field_labels_ref_op';
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['label'] = 'Labels';
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['operator'] = 'field_labels_ref_op';
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['identifier'] = 'labels';
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['ogmk_labels_ref']['id'] = 'ogmk_labels_ref';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['table'] = 'search_api_index_node';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['field'] = 'ogmk_labels_ref';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['value'] = array();
+  $handler->display->display_options['filters']['ogmk_labels_ref']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['operator_id'] = 'ogmk_labels_ref_op';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['label'] = 'Labels';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['operator'] = 'ogmk_labels_ref_op';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['identifier'] = 'labels';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_labels_ref']['type'] = 'select';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['type'] = 'select';
   /* Filter criterion: Indexed Node: Shop */
-  $handler->display->display_options['filters']['og_shop_ref']['id'] = 'og_shop_ref';
-  $handler->display->display_options['filters']['og_shop_ref']['table'] = 'search_api_index_node';
-  $handler->display->display_options['filters']['og_shop_ref']['field'] = 'og_shop_ref';
-  $handler->display->display_options['filters']['og_shop_ref']['value'] = array();
-  $handler->display->display_options['filters']['og_shop_ref']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['og_shop_ref']['expose']['operator_id'] = 'og_shop_ref_op';
-  $handler->display->display_options['filters']['og_shop_ref']['expose']['label'] = 'Shop';
-  $handler->display->display_options['filters']['og_shop_ref']['expose']['operator'] = 'og_shop_ref_op';
-  $handler->display->display_options['filters']['og_shop_ref']['expose']['identifier'] = 'shop';
-  $handler->display->display_options['filters']['og_shop_ref']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['og_shop_ref']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['ogmk_shop_ref']['id'] = 'ogmk_shop_ref';
+  $handler->display->display_options['filters']['ogmk_shop_ref']['table'] = 'search_api_index_node';
+  $handler->display->display_options['filters']['ogmk_shop_ref']['field'] = 'ogmk_shop_ref';
+  $handler->display->display_options['filters']['ogmk_shop_ref']['value'] = array();
+  $handler->display->display_options['filters']['ogmk_shop_ref']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_shop_ref']['expose']['operator_id'] = 'ogmk_shop_ref_op';
+  $handler->display->display_options['filters']['ogmk_shop_ref']['expose']['label'] = 'Shop';
+  $handler->display->display_options['filters']['ogmk_shop_ref']['expose']['operator'] = 'ogmk_shop_ref_op';
+  $handler->display->display_options['filters']['ogmk_shop_ref']['expose']['identifier'] = 'shop';
+  $handler->display->display_options['filters']['ogmk_shop_ref']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_shop_ref']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['og_shop_ref']['expose']['reduce'] = 0;
+  $handler->display->display_options['filters']['ogmk_shop_ref']['expose']['reduce'] = 0;
   /* Filter criterion: Indexed Node: Variants » Price » Amount (decimal) (Min) */
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['id'] = 'field_products_ref_commerce_price_amount_decimal_asc';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['table'] = 'search_api_index_node';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['field'] = 'field_products_ref_commerce_price_amount_decimal_asc';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['operator'] = 'between';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['operator_id'] = 'field_products_ref_commerce_price_amount_decimal_asc_op';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['label'] = 'Price Range';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['operator'] = 'field_products_ref_commerce_price_amount_decimal_asc_op';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['identifier'] = 'price';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['id'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['table'] = 'search_api_index_node';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['field'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['operator'] = 'between';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['operator_id'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc_op';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['label'] = 'Price Range';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['operator'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc_op';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['identifier'] = 'price';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['group_info']['label'] = 'Variants » Price » Amount (decimal) (Min)';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['group_info']['identifier'] = 'field_products_ref_commerce_price_amount_decimal_asc';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['group_info']['label'] = 'Variants » Price » Amount (decimal) (Min)';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['group_info']['identifier'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -446,7 +446,7 @@ function ogmk_search_views_default_views() {
         ),
       ),
     ),
-    'field_category_ref' => array(
+    'ogmk_category_ref' => array(
       'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
@@ -464,7 +464,7 @@ function ogmk_search_views_default_views() {
         ),
       ),
     ),
-    'field_labels_ref' => array(
+    'ogmk_labels_ref' => array(
       'bef_format' => 'default',
       'slider_options' => array(
         'bef_slider_min' => '0',
@@ -487,7 +487,7 @@ function ogmk_search_views_default_views() {
         ),
       ),
     ),
-    'field_products_ref_commerce_price_amount_decimal_asc' => array(
+    'ogmk_products_ref_commerce_price_amount_decimal_asc' => array(
       'bef_format' => 'bef_slider',
       'slider_options' => array(
         'bef_slider_min' => '0',
@@ -543,11 +543,11 @@ function ogmk_search_views_default_views() {
   $handler->display->display_options['sorts']['search_api_relevance']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['search_api_relevance']['expose']['label'] = 'Relevance';
   /* Sort criterion: Indexed Node: Variants » Price » Amount (decimal) (Min) */
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['id'] = 'field_products_ref_commerce_price_amount_decimal_asc';
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['table'] = 'search_api_index_node';
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['field'] = 'field_products_ref_commerce_price_amount_decimal_asc';
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['exposed'] = TRUE;
-  $handler->display->display_options['sorts']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['label'] = 'Price';
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['id'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc';
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['table'] = 'search_api_index_node';
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['field'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc';
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['label'] = 'Price';
   /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_node';
@@ -556,16 +556,16 @@ function ogmk_search_views_default_views() {
   $handler->display->display_options['sorts']['created']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['created']['expose']['label'] = 'Date created';
   /* Contextual filter: Indexed Node: Shop */
-  $handler->display->display_options['arguments']['og_shop_ref']['id'] = 'og_shop_ref';
-  $handler->display->display_options['arguments']['og_shop_ref']['table'] = 'search_api_index_node';
-  $handler->display->display_options['arguments']['og_shop_ref']['field'] = 'og_shop_ref';
-  $handler->display->display_options['arguments']['og_shop_ref']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['og_shop_ref']['default_argument_type'] = 'og_context';
-  $handler->display->display_options['arguments']['og_shop_ref']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['og_shop_ref']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['og_shop_ref']['validate']['type'] = 'og';
-  $handler->display->display_options['arguments']['og_shop_ref']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['og_shop_ref']['not'] = 0;
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['id'] = 'ogmk_shop_ref';
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['table'] = 'search_api_index_node';
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['field'] = 'ogmk_shop_ref';
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['default_argument_type'] = 'og_context';
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['validate']['type'] = 'og';
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['ogmk_shop_ref']['not'] = 0;
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_node';
@@ -596,49 +596,49 @@ function ogmk_search_views_default_views() {
     3 => 0,
   );
   /* Filter criterion: Indexed Node: Category */
-  $handler->display->display_options['filters']['field_category_ref']['id'] = 'field_category_ref';
-  $handler->display->display_options['filters']['field_category_ref']['table'] = 'search_api_index_node';
-  $handler->display->display_options['filters']['field_category_ref']['field'] = 'field_category_ref';
-  $handler->display->display_options['filters']['field_category_ref']['value'] = array();
-  $handler->display->display_options['filters']['field_category_ref']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_category_ref']['expose']['operator_id'] = 'field_category_ref_op';
-  $handler->display->display_options['filters']['field_category_ref']['expose']['label'] = 'Category';
-  $handler->display->display_options['filters']['field_category_ref']['expose']['operator'] = 'field_category_ref_op';
-  $handler->display->display_options['filters']['field_category_ref']['expose']['identifier'] = 'category';
-  $handler->display->display_options['filters']['field_category_ref']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['ogmk_category_ref']['id'] = 'ogmk_category_ref';
+  $handler->display->display_options['filters']['ogmk_category_ref']['table'] = 'search_api_index_node';
+  $handler->display->display_options['filters']['ogmk_category_ref']['field'] = 'ogmk_category_ref';
+  $handler->display->display_options['filters']['ogmk_category_ref']['value'] = array();
+  $handler->display->display_options['filters']['ogmk_category_ref']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['operator_id'] = 'ogmk_category_ref_op';
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['operator'] = 'ogmk_category_ref_op';
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['identifier'] = 'category';
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_category_ref']['expose']['reduce'] = 0;
+  $handler->display->display_options['filters']['ogmk_category_ref']['expose']['reduce'] = 0;
   /* Filter criterion: Indexed Node: Labels */
-  $handler->display->display_options['filters']['field_labels_ref']['id'] = 'field_labels_ref';
-  $handler->display->display_options['filters']['field_labels_ref']['table'] = 'search_api_index_node';
-  $handler->display->display_options['filters']['field_labels_ref']['field'] = 'field_labels_ref';
-  $handler->display->display_options['filters']['field_labels_ref']['value'] = array();
-  $handler->display->display_options['filters']['field_labels_ref']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['operator_id'] = 'field_labels_ref_op';
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['label'] = 'Labels';
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['operator'] = 'field_labels_ref_op';
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['identifier'] = 'labels';
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_labels_ref']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['ogmk_labels_ref']['id'] = 'ogmk_labels_ref';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['table'] = 'search_api_index_node';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['field'] = 'ogmk_labels_ref';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['value'] = array();
+  $handler->display->display_options['filters']['ogmk_labels_ref']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['operator_id'] = 'ogmk_labels_ref_op';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['label'] = 'Labels';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['operator'] = 'ogmk_labels_ref_op';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['identifier'] = 'labels';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_labels_ref']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_labels_ref']['type'] = 'select';
+  $handler->display->display_options['filters']['ogmk_labels_ref']['type'] = 'select';
   /* Filter criterion: Indexed Node: Variants » Price » Amount (decimal) (Min) */
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['id'] = 'field_products_ref_commerce_price_amount_decimal_asc';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['table'] = 'search_api_index_node';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['field'] = 'field_products_ref_commerce_price_amount_decimal_asc';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['operator'] = 'between';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['operator_id'] = 'field_products_ref_commerce_price_amount_decimal_asc_op';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['label'] = 'Price Range';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['operator'] = 'field_products_ref_commerce_price_amount_decimal_asc_op';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['identifier'] = 'price';
-  $handler->display->display_options['filters']['field_products_ref_commerce_price_amount_decimal_asc']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['id'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['table'] = 'search_api_index_node';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['field'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['operator'] = 'between';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['operator_id'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc_op';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['label'] = 'Price Range';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['operator'] = 'ogmk_products_ref_commerce_price_amount_decimal_asc_op';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['identifier'] = 'price';
+  $handler->display->display_options['filters']['ogmk_products_ref_commerce_price_amount_decimal_asc']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,

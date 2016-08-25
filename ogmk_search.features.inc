@@ -28,11 +28,11 @@ function ogmk_search_default_search_api_index() {
       "fields" : {
         "body:value" : { "type" : "text" },
         "created" : { "type" : "integer" },
-        "field_category_ref" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "field_category_ref:name" : { "type" : "text", "boost" : "2.0" },
-        "field_labels_ref" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_labels_ref:name" : { "type" : "list\\u003Ctext\\u003E", "boost" : "2.0" },
-        "og_shop_ref" : { "type" : "integer", "entity_type" : "node" },
+        "ogmk_category_ref" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "ogmk_category_ref:name" : { "type" : "text", "boost" : "2.0" },
+        "ogmk_labels_ref" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "ogmk_labels_ref:name" : { "type" : "list\\u003Ctext\\u003E", "boost" : "2.0" },
+        "ogmk_shop_ref" : { "type" : "integer", "entity_type" : "node" },
         "search_api_language" : { "type" : "string" },
         "status" : { "type" : "integer" },
         "title" : { "type" : "text", "boost" : "3.0" },
@@ -58,8 +58,8 @@ function ogmk_search_default_search_api_index() {
           "settings" : { "fields" : {
               "title" : true,
               "body:value" : true,
-              "field_category_ref:name" : true,
-              "field_labels_ref:name" : true
+              "ogmk_category_ref:name" : true,
+              "ogmk_labels_ref:name" : true
             }
           }
         },
@@ -80,8 +80,8 @@ function ogmk_search_default_search_api_index() {
             "fields" : {
               "title" : true,
               "body:value" : true,
-              "field_category_ref:name" : true,
-              "field_labels_ref:name" : true
+              "ogmk_category_ref:name" : true,
+              "ogmk_labels_ref:name" : true
             },
             "spaces" : "[^[:alnum:]]",
             "ignorable" : "[\\u0027]"
@@ -94,8 +94,8 @@ function ogmk_search_default_search_api_index() {
             "fields" : {
               "title" : true,
               "body:value" : true,
-              "field_category_ref:name" : true,
-              "field_labels_ref:name" : true
+              "ogmk_category_ref:name" : true,
+              "ogmk_labels_ref:name" : true
             },
             "file" : "",
             "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc"
@@ -199,8 +199,8 @@ function ogmk_search_default_search_api_server() {
             "boost" : "1.0"
           },
           "body:value" : { "table" : "search_api_db_node_text", "type" : "text", "boost" : "1.0" },
-          "field_category_ref:name" : { "table" : "search_api_db_node_text", "type" : "text", "boost" : "2.0" },
-          "field_labels_ref:name" : {
+          "ogmk_category_ref:name" : { "table" : "search_api_db_node_text", "type" : "text", "boost" : "2.0" },
+          "ogmk_labels_ref:name" : {
             "table" : "search_api_db_node_text",
             "type" : "list\\u003Ctext\\u003E",
             "boost" : "2.0"
@@ -217,20 +217,20 @@ function ogmk_search_default_search_api_server() {
             "type" : "integer",
             "boost" : "1.0"
           },
-          "og_shop_ref" : {
+          "ogmk_shop_ref" : {
             "table" : "search_api_db_node",
-            "column" : "og_shop_ref",
+            "column" : "ogmk_shop_ref",
             "type" : "integer",
             "boost" : "1.0"
           },
-          "field_category_ref" : {
+          "ogmk_category_ref" : {
             "table" : "search_api_db_node",
-            "column" : "field_category_ref",
+            "column" : "ogmk_category_ref",
             "type" : "integer",
             "boost" : "1.0"
           },
-          "field_labels_ref" : {
-            "table" : "search_api_db_node_field_labels_ref",
+          "ogmk_labels_ref" : {
+            "table" : "search_api_db_node_ogmk_labels_ref",
             "column" : "value",
             "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
