@@ -225,7 +225,7 @@ function ogmk_search_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'product' => 'product',
+    'ogmk_product' => 'ogmk_product',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Indexed Node: Status */
@@ -571,7 +571,7 @@ function ogmk_search_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'product' => 'product',
+    'ogmk_product' => 'ogmk_product',
   );
   /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
