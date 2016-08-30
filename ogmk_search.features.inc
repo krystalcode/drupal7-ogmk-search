@@ -28,6 +28,7 @@ function ogmk_search_default_search_api_index() {
       "fields" : {
         "body:value" : { "type" : "text" },
         "created" : { "type" : "integer" },
+        "ogmk_boolean" : { "type" : "boolean" },
         "ogmk_category_ref" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "ogmk_category_ref:name" : { "type" : "text", "boost" : "2.0" },
         "ogmk_labels_ref" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
@@ -276,6 +277,12 @@ function ogmk_search_default_search_api_server() {
             "table" : "search_api_db_node",
             "column" : "ogmk_products_ref_commerce_price_amount_decimal_desc",
             "type" : "decimal",
+            "boost" : "1.0"
+          },
+          "ogmk_boolean" : {
+            "table" : "search_api_db_node",
+            "column" : "ogmk_boolean",
+            "type" : "boolean",
             "boost" : "1.0"
           }
         }

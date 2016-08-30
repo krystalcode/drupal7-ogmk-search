@@ -236,6 +236,14 @@ function ogmk_search_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['filters']['status']['group'] = 1;
+  /* Filter criterion: Indexed Node: Archived */
+  $handler->display->display_options['filters']['ogmk_boolean']['id'] = 'ogmk_boolean';
+  $handler->display->display_options['filters']['ogmk_boolean']['table'] = 'search_api_index_node';
+  $handler->display->display_options['filters']['ogmk_boolean']['field'] = 'ogmk_boolean';
+  $handler->display->display_options['filters']['ogmk_boolean']['value'] = array(
+    0 => '0',
+  );
+  $handler->display->display_options['filters']['ogmk_boolean']['group'] = 1;
   /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_node';
@@ -642,6 +650,13 @@ function ogmk_search_views_default_views() {
     2 => '2',
     1 => 0,
     3 => 0,
+  );
+  /* Filter criterion: Indexed Node: Archived */
+  $handler->display->display_options['filters']['ogmk_boolean']['id'] = 'ogmk_boolean';
+  $handler->display->display_options['filters']['ogmk_boolean']['table'] = 'search_api_index_node';
+  $handler->display->display_options['filters']['ogmk_boolean']['field'] = 'ogmk_boolean';
+  $handler->display->display_options['filters']['ogmk_boolean']['value'] = array(
+    0 => '0',
   );
 
   /* Display: Page */
