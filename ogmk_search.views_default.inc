@@ -52,7 +52,7 @@ function ogmk_search_views_default_views() {
       'text_input_required' => array(
         'text_input_required' => array(
           'value' => 'Select any filter and click on Apply to see results',
-          'format' => 'basic_html',
+          'format' => 'ogmk_plain_html',
         ),
       ),
       'allow_secondary' => 0,
@@ -419,7 +419,7 @@ function ogmk_search_views_default_views() {
       'text_input_required' => array(
         'text_input_required' => array(
           'value' => 'Select any filter and click on Apply to see results',
-          'format' => 'basic_html',
+          'format' => 'ogmk_plain_html',
         ),
       ),
       'allow_secondary' => 0,
