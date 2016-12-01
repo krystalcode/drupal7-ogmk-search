@@ -26,7 +26,6 @@ function ogmk_search_default_search_api_index() {
       "index_directly" : 0,
       "cron_limit" : "50",
       "fields" : {
-        "body:value" : { "type" : "text" },
         "created" : { "type" : "integer" },
         "ogmk_boolean" : { "type" : "boolean" },
         "ogmk_category_ref" : { "type" : "integer", "entity_type" : "taxonomy_term" },
@@ -37,6 +36,8 @@ function ogmk_search_default_search_api_index() {
         "ogmk_products_ref_commerce_price_amount_decimal_asc" : { "type" : "decimal" },
         "ogmk_products_ref_commerce_price_amount_decimal_desc" : { "type" : "decimal" },
         "ogmk_shop_ref" : { "type" : "integer", "entity_type" : "node" },
+        "ogmk_text" : { "type" : "text", "boost" : "2.0" },
+        "ogmk_text_with_summary:value" : { "type" : "text" },
         "search_api_language" : { "type" : "string" },
         "status" : { "type" : "integer" },
         "title" : { "type" : "text", "boost" : "3.0" },
@@ -143,6 +144,14 @@ function ogmk_search_default_search_api_index() {
 
 /**
  * Implements hook_default_search_api_server().
+ *
+ * @Issue(
+ *   "Do we need both ogmk_category/labels_ref and ogmk_category_labels:name to
+ *   be indexed?"
+ *   type="investigation"
+ *   priority="low"
+ *   labels="correctedness"
+ * )
  */
 function ogmk_search_default_search_api_server() {
   $items = array();
@@ -230,12 +239,6 @@ function ogmk_search_default_search_api_server() {
             "type" : "integer",
             "boost" : "1.0"
           },
-          "ogmk_shop_ref" : {
-            "table" : "search_api_db_node",
-            "column" : "ogmk_shop_ref",
-            "type" : "integer",
-            "boost" : "1.0"
-          },
           "ogmk_category_ref" : {
             "table" : "search_api_db_node",
             "column" : "ogmk_category_ref",
@@ -248,23 +251,16 @@ function ogmk_search_default_search_api_server() {
             "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
           },
+          "ogmk_shop_ref" : {
+            "table" : "search_api_db_node",
+            "column" : "ogmk_shop_ref",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
           "search_api_language" : {
             "table" : "search_api_db_node",
             "column" : "search_api_language",
             "type" : "string",
-            "boost" : "1.0"
-          },
-          "body:value" : { "table" : "search_api_db_node_text", "type" : "text", "boost" : "1.0" },
-          "ogmk_category_ref:name" : { "table" : "search_api_db_node_text", "type" : "text", "boost" : "2.0" },
-          "ogmk_labels_ref:name" : {
-            "table" : "search_api_db_node_text",
-            "type" : "list\\u003Ctext\\u003E",
-            "boost" : "2.0"
-          },
-          "ogmk_products_ref:commerce_price:amount_decimal" : {
-            "table" : "search_api_db_node_ogmk_products_ref_commerce_price_amount_dec",
-            "column" : "value",
-            "type" : "list\\u003Cdecimal\\u003E",
             "boost" : "1.0"
           },
           "ogmk_products_ref_commerce_price_amount_decimal_asc" : {
@@ -279,12 +275,26 @@ function ogmk_search_default_search_api_server() {
             "type" : "decimal",
             "boost" : "1.0"
           },
+          "ogmk_category_ref:name" : { "table" : "search_api_db_node_text", "type" : "text", "boost" : "2.0" },
+          "ogmk_labels_ref:name" : {
+            "table" : "search_api_db_node_text",
+            "type" : "list\\u003Ctext\\u003E",
+            "boost" : "2.0"
+          },
+          "ogmk_products_ref:commerce_price:amount_decimal" : {
+            "table" : "search_api_db_node_ogmk_products_ref_commerce_price_amount_dec",
+            "column" : "value",
+            "type" : "list\\u003Cdecimal\\u003E",
+            "boost" : "1.0"
+          },
           "ogmk_boolean" : {
             "table" : "search_api_db_node",
             "column" : "ogmk_boolean",
             "type" : "boolean",
             "boost" : "1.0"
-          }
+          },
+          "ogmk_text" : { "table" : "search_api_db_node_text", "type" : "text", "boost" : "2.0" },
+          "ogmk_text_with_summary:value" : { "table" : "search_api_db_node_text", "type" : "text", "boost" : "1.0" }
         }
       }
     },
